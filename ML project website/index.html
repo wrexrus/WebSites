@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Facial Recognition- Medical Records</title>
+    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=PT+Serif:ital,wght@1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="w/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Young+Serif&display=swap" rel="stylesheet">
+    <style>
+        /* CSS reset */
+        body {
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url('back1.png');
+            font-family: 'Kanit', sans-serif;
+            font-family: 'PT Serif', serif;
+            height: 3000px;
+        }
+
+        .left {
+            display: inline-block;
+            /* border: 2px solid red; */
+            position: absolute;
+            left: 20px;
+            top: 20px;
+
+        }
+
+        .left img {
+            width: 148px;
+            height: 120px;
+
+            /* filter: invert(100%); Use to convert black image to white or vice versa */
+        }
+
+        .left div {
+            line-height: 44px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 45px;
+            color: wheat;
+            text-align: center;
+
+        }
+
+        .mid {
+
+            display: block;
+            width: 50%;
+            margin: 29px auto;
+            /* border: 2px solid green; */
+        }
+
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 20px;
+            display: inline-block;
+            /* border: 2px solid yellow; */
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-family: 'Caprasimo', cursive;
+            font-family: 'Young Serif', serif;
+            font-size: 25px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 34px 24px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            color: aquamarine;
+            text-decoration: underline;
+
+        }
+
+
+        #live {
+            color: red;
+        }
+        #reg{
+            color: beige;
+            font-size: 35px;
+        }
+        .btn {
+            margin: 0px 9px;
+            color: white;
+            background-color: black;
+            padding: 4px 14px;
+            /* border: 2px solid grey; */
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: 'Kanit', sans-seif;
+            font-family: 'PT Serif', serif;
+        }
+
+        .btn:hover {
+            background-color: grey;
+        }
+
+    </style>
+
+
+    <body>
+        <header class="header">
+            <!-- Left box for logo -->
+            <div class="left">
+                <img src="img/logo.jpg" alt="LoGO">
+                <div>Med Vault</div>
+            </div>
+            <!-- mid box for navbar -->
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="Aboutus.html" target="_blank">About Us</a></li>
+                    <li><a href="record.html" target="_blank">Patient Record</a></li>
+                    <li><a href="contact.html" target="_blank">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Right box for buttons -->
+            <div class="right">
+                <button class="btn">Call Us</button>
+                <button class="btn">Email Us</button>
+            </div>
+        </header>
+
+        
+        <h2>Patient's Camera</h2>
+        <video id="video" autoplay style="display: none;;"></video>
+        <canvas id="canvas" width="600px" height="400px"></canvas>
+        <br>
+        <a href="login.html" target="_blank " id="reg">Register</a>
+
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+
+    <script src="script.js"></script>
+
+    </html>
