@@ -52,6 +52,11 @@ input{
     padding: 10px;
     font-weight: 14px;
 }
+
+#input-box{
+    color: black;
+}
+
 button{
     color: #fff;
     border: none;
@@ -83,4 +88,29 @@ ul li::before{
     background-size: cover;
     top: 12px;
     left: 10px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+   background-image: url('checked_1.png');
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+ul li span:hover{
+    background-color: #cb2dc1;
 }
