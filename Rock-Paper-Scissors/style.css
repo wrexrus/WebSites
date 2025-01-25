@@ -2,10 +2,16 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    /* background-color: rgba(255, 166, 0, 0.89); */
+}
+body{
+    background-image: url('images/back.jpg');
+    background-size: fill;         
+    background-position: center;    
+    background-attachment: fixed; 
 }
 
 h1{
+    font-size: 3rem;
     background-color: black;
     color: white;
     height: 5rem;
@@ -22,7 +28,6 @@ h1{
 }
 .choice:hover{
     background-color: black;
-    /* opacity: 0.5; */
     cursor: pointer;
 }
 
@@ -46,7 +51,7 @@ img{
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 8rem;
     gap: 5rem;
 }
 
@@ -55,10 +60,11 @@ img{
 }
 
 .msg-container{
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 
 #msg{
+    z-index: -1;
     background-color: black;
     color: aliceblue;
     font-size: 2rem;
